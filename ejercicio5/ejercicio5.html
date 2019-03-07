@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <input type="text" name="calculator" value="">
+  <br>
+  <button class="btn" type="button" id="button1" value="1" onclick="getNum(this)">1</button>
+  <button class="btn" type="button" id="button2" value="2" onclick="getNum(this)">2</button>
+  <button class="btn" type="button" id="button3" value="3" onclick="getNum(this)">3</button>
+  <button class="btn" type="button" id="button+" value="+" onclick="getNum(this)">+</button>
+  <br>
+  <button class="btn" type="button" id="button4" value="4" onclick="getNum(this)">4</button>
+  <button class="btn" type="button" id="button5" value="5" onclick="getNum(this)">5</button>
+  <button class="btn" type="button" id="button6" value="6" onclick="getNum(this)">6</button>
+  <button class="btn" type="button" id="button-" value="-" onclick="getNum(this)">-</button>
+  <br>
+  <button class="btn" type="button" id="button7" value="7" onclick="getNum(this)">7</button>
+  <button class="btn" type="button" id="button8" value="8" onclick="getNum(this)">8</button>
+  <button class="btn" type="button" id="button9" value="9" onclick="getNum(this)">9</button>
+  <button class="btn" type="button" id="button/" value="/" onclick="getNum(this)">/</button>
+  <br>
+  <button class="btn" type="button" id="button0" value="0" onclick="getNum(this)">0</button>
+  <button class="btn" type="button" id="button." value="." onclick="getNum(this)">.</button>
+  <button class="result" type="button" name="result" onclick="calcTotal()">=</button>
+  <button class="btn" type="button" id="button-" value="*" onclick="getNum(this)">*</button>
+  <br>
+  <script type="text/javascript">
+    var result = document.getElementsByName("result")[0];
+    var calculator = document.getElementsByName("calculator")[0];
+    var calcTotal = function () {
+      calculator.value = eval(calculator.value);
+    }
+
+    function getNum(num) {
+      calculator.value += document.getElementById(num.id).value;
+      }
+    
+  </script>
+</body>
+
+</html>
